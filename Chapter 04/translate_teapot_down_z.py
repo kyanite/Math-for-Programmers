@@ -1,11 +1,10 @@
-from vectors import scale, add
+from vectors import add
 from teapot import load_triangles
 from draw_model import draw_model
 
 def polygon_map(transformation, polygons):
     return [
-        [transformation(vertex) for vertex in triangle]
-        for triangle in polygons
+        [transformation(vertex) for vertex in triangle] for triangle in polygons
     ]
 
 def translate_by(translation):
@@ -14,7 +13,7 @@ def translate_by(translation):
     return new_function
 
 ####################################################################
-#### this code takes a snapshot to reproduce the exact figure 
+#### this code takes a snapshot to reproduce the exact figure
 #### shown in the book as an image saved in the "figs" directory
 #### to run it, run this script with command line arg --snapshot
 import sys

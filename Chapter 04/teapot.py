@@ -44,11 +44,3 @@ def load_triangles():
                 assert(len(v)==3)
             tris.append(tri)
     return tris
-
-#
-# print(len(polys), len(tris))
-# for i in range(2,481):
-#     r = content[i].split()
-#     print (float(r[0]), float(r[1]), float(r[2]))
-
-# vertex_lines = [(float(r[0]), float(r[1]), float(r[2])) for i in range(2,481) for r in content[i].split(" ")]

@@ -24,7 +24,7 @@ def rotate_z_by(angle):
     return new_function
 
 ####################################################################
-#### this code takes a snapshot to reproduce the exact figure 
+#### this code takes a snapshot to reproduce the exact figure
 #### shown in the book as an image saved in the "figs" directory
 #### to run it, run this script with command line arg --snapshot
 import sys

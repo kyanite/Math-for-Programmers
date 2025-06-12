@@ -20,7 +20,7 @@ def apply_A(v): #2
     )
 
 ####################################################################
-#### this code takes a snapshot to reproduce the exact figure 
+#### this code takes a snapshot to reproduce the exact figure
 #### shown in the book as an image saved in the "figs" directory
 #### to run it, run this script with command line arg --snapshot
 import sys
