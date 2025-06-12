@@ -1,11 +1,9 @@
 from teapot import load_triangles
 from draw_model import draw_model
-from math import pi
 
 def polygon_map(transformation, polygons):
     return [
-        [transformation(vertex) for vertex in triangle]
-        for triangle in polygons
+        [transformation(vertex) for vertex in triangle] for triangle in polygons
     ]
 
 def cube_stretch_y(vector):

@@ -1,16 +1,13 @@
-from vectors import scale, add
+from vectors import add, scale
 from teapot import load_triangles
 from draw_model import draw_model
 
 def polygon_map(transformation, polygons):
-    return [
-        [transformation(vertex) for vertex in triangle]
-        for triangle in polygons
-    ]
+    return [[transformation(vertex) for vertex in triangle] for triangle in polygons]
 
-Ae1 = (1,1,1)
-Ae2 = (1,0,-1)
-Ae3 = (0,1,1)
+Ae1 = (1, 1, 1)
+Ae2 = (1, 0, -1)
+Ae3 = (0, 1, 1)
 
 def apply_A(v): #2
     return add( #3
@@ -25,8 +22,9 @@ def apply_A(v): #2
 #### to run it, run this script with command line arg --snapshot
 import sys
 import camera
+
 if '--snapshot' in sys.argv:
-    camera.default_camera = camera.Camera('fig4.35_linear_transform',[0])
+    camera.default_camera = camera.Camera('fig4.35_linear_transform', [0])
 ####################################################################
 
 draw_model(polygon_map(apply_A, load_triangles()))
